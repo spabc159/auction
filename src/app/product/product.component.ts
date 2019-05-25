@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-
+  // 3、声明数组存储产品数组
   private products: Array<Product>;
   private imgUrl = 'http://placehold.it/320x150';
   constructor() { }
 
   ngOnInit() {
+    // 4、在生命周期钩子里调用数据
     this.products = [
       new Product(1, '第一个商品', 1.99, 3.5, '这事一个商品，是我在学习慕课网angular时候创建的', ['电子产品', '硬件设备']),
       new Product(2, '第二个商品', 2.99, 4.5, '这事二个商品，是我在学习慕课网angular时候创建的', ['化妆品', '个人用品']),
@@ -23,7 +24,9 @@ export class ProductComponent implements OnInit {
   }
 
 }
+// 1、先构造一个对象
 export class Product {
+  // 2、在构造函数里声明产品属性
   constructor(
     public id: number,
     public title: string,

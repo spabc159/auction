@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./stars.component.css']
 })
 export class StarsComponent implements OnInit {
-  @Input()
+  @Input()// 装饰器传入父组件的值
   private rating: number = 0;
 
   private stars: boolean[];
